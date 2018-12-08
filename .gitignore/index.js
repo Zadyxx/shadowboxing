@@ -28,15 +28,15 @@ bot.on('message', message => {
         var lol = new Discord.RichEmbed()
             .setAuthor('Création de Zadyx:', (message.author.avatarURL))
             .setTitle("Lien Youtube")
-            .setURL("https://www.youtube.com/watch?v=SQnssw-qxvo")
-            .setDescription("Vidéo en non répertoriée, Youtube sert juste d'hébergeur pour vous montrer")
+            .setURL("https://www.youtube.com/watch?v=yA_W-7ivWwE")
+            .setDescription("Lien de la vidéo de présentation des CC -> Prix ``4e``")
             .addBlankField() 
-            .addField("Infos de l'expéditeur:", "Edit de Lil Peep, réalisé en 3h environ", false)
+            .addField("Infos de l'expéditeur:", "Pack de 4 CC pour: Trailer &  Courts métrages", false)
             .addBlankField() 
-            .addField('Logiciels utilisés:', "AP & AE", false)
+            .addField('Plugin nécessaire', "Magic Bullet", false)
             .setThumbnail(message.author.avatarURL)
             .setColor('#2BA812')
-            .setFooter('message.author.')
+            .setFooter('Zadyx')
             .setTimestamp();
         message.channel.sendEmbed(lol);
         console.log("Commane du bot envoyée !");
