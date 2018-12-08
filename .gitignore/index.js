@@ -29,7 +29,7 @@ bot.on('message', message => {
             .setAuthor('Création de ' + (message.member.displayName) + ":", (message.author.avatarURL))
             .setTitle("Lien Youtube")
             .setURL("https://www.youtube.com/watch?v=yA_W-7ivWwE")
-            .setDescription("Lien de la vidéo de présentation des CC | ``Prix du  : 2e``")
+            .setDescription("Lien de la vidéo de présentation des CC | ``Prix du Pack : 2e``")
             .addBlankField() 
             .addField("Infos de l'expéditeur:", "Pack de 4 CC pour: Trailer &  Courts métrages", false)
             .addBlankField() 
