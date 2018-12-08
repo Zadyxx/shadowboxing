@@ -36,7 +36,7 @@ bot.on('message', message => {
             .addField('Plugin nécessaire', "Magic Bullet", false)
             .setThumbnail(message.author.avatarURL)
             .setColor('#2BA812')
-            .setFooter('Zadyx')
+            .setFooter((message.member.displayName))
             .setTimestamp();
         message.channel.sendEmbed(lol);
         console.log("Commane du bot envoyée !");
