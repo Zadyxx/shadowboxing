@@ -26,10 +26,10 @@ bot.on('message', message => {
     if (message.content === prefix + "anno")
     {
         var lol = new Discord.RichEmbed()
-            .setAuthor('Création de Zadyx:', (message.author.avatarURL))
+            .setAuthor('Création de (message.member.user.tag):', (message.author.avatarURL))
             .setTitle("Lien Youtube")
             .setURL("https://www.youtube.com/watch?v=yA_W-7ivWwE")
-            .setDescription("Lien de la vidéo de présentation des CC -> Prix ``4e``")
+            .setDescription("Lien de la vidéo de présentation des CC | ``Prix du  : 2e``")
             .addBlankField() 
             .addField("Infos de l'expéditeur:", "Pack de 4 CC pour: Trailer &  Courts métrages", false)
             .addBlankField() 
