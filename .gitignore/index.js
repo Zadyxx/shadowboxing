@@ -91,13 +91,26 @@ const uneCommande = '$sug '
 bot.on('message', message => {
   if (message.content.startsWith(uneCommande)) {
     const str = message.content.substring(uneCommande.length)
-    let reportEmbed = new Discord.RichEmbed()
-    .setDescription("Suggestions")
+    let premier = new Discord.RichEmbed()
+    .setAuthor('Merci pour ton idée/Suggestion' + (message.member.displayName) + "!", (message.author.avatarURL))
     .setColor("#15f153")
-    .addField("Suggestions faite par:", (message.author))
-    .addField("Channel:", (message.channel))
-    .addField("Heure:", (message.createdAt))
-    .addField("Suggestion:", str);
+    .addField("Suggestion:", str)
+    .addBlankField() 
+    .setFooter((message.member.displayName))
+    .setTimestamp();
+    message.channel.sendEmbed(premier);
+    let reportEmbed = new Discord.RichEmbed()
+    .setAuthor('Idée de:' + (message.member.displayName), (message.author.avatarURL))
+    .setColor("#15f153")
+    .addField("Suggestion:", str)
+    .addBlankField() 
+    .setFooter((message.member.displayName))
+    .setTimestamp();
+    const reportschannel = message.guild.channels.find(`name`, "suggestions");
+    message.delete().catch(O_o=>{});
+    reportschannel.sendEmbed(reportEmbed);
+  }
+});
     const reportschannel = message.guild.channels.find(`name`, "suggestions");
     message.delete().catch(O_o=>{});
     reportschannel.sendEmbed(reportEmbed);
