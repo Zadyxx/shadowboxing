@@ -52,7 +52,7 @@ bot.on('message', message => {
         var changes = new Discord.RichEmbed()
             .setAuthor('Modifications de ' + (message.member.displayName) + ":", (message.author.avatarURL))
             .setTitle("Color Correction:")
-            .setDescription("Les 2 Packs des Color Correction sont finis: il y en a un gratuit et un payant.")
+            .setDescription("Les 2 Packs sont finit: il y en a un gratuit et un payant.")
             .addBlankField() 
             .setThumbnail(message.author.avatarURL)
             .setColor('0xff80ff')
