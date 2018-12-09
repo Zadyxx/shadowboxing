@@ -92,8 +92,5 @@ bot.on('message', message => {
   if (message.content.startsWith(uneCommande)) {
     const str = message.content.substring(uneCommande.length)
     message.channel.sendMessage(str)
-    let reportschannel = message.guild.channels.find(`name`, "suggestions");
-    message.delete().catch(O_o=>{});
-    reportschannel.send(reportEmbed);
   }
 });
