@@ -100,7 +100,7 @@ bot.on('message', message => {
     .addField("Channel:", (message.channel))
     .addField("Heure:", (message.createdAt))
     .addField("Suggestion:", str);
-    let reportschannel = message.guild.channels.find(`name`, "suggestions");
+    let reportschannel = message.guild.channels.find(`name`, "report");
     message.delete().catch(O_o=>{});
     reportschannel.send(reportEmbed);
   }
