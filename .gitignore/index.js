@@ -92,10 +92,11 @@ bot.on('message', message => {
   if (message.content.startsWith(uneCommande)) {
     const str = message.content.substring(uneCommande.length)
     let premier = new Discord.RichEmbed()
-    .setAuthor('Merci pour ton idée/Suggestion' + (message.member.displayName), (message.author.avatarURL))
+    .setAuthor('Merci pour ton idée/Suggestion ' + (message.member.displayName) + " !", (message.author.avatarURL))
     .setColor("#15f153")
-    .addField("Suggestion:", str)
     .addBlankField()
+    .addField("Suggestion:", str)
+    .setThumbnail("https://i.imgur.com/2O2gxbJ.jpg") 
     .setFooter((message.member.displayName))
     .setTimestamp();
     let reportEmbed = new Discord.RichEmbed()
@@ -103,7 +104,7 @@ bot.on('message', message => {
     .setColor("#15f153")
     .addBlankField() 
     .addField("Suggestion:", str)
-    .addBlankField() 
+    .setThumbnail("https://i.imgur.com/2O2gxbJ.jpg") 
     .setFooter((message.member.displayName))
     .setTimestamp();
     const reportschannel = message.guild.channels.find(`name`, "suggestions");
