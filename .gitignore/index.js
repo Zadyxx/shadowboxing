@@ -65,9 +65,9 @@ bot.on('message', message => {
 
 
 bot.on('message', message => {
-    if (message.content === prefix + "anno")
+    if (message.content === prefix + "ex")
     {
-        var anno = new Discord.RichEmbed()
+        var ex = new Discord.RichEmbed()
             .setAuthor('Création de ' + (message.member.displayName) + ":", (message.author.avatarURL))
             .setTitle("Lien Youtube")
             .setURL("https://www.youtube.com/watch?v=Ac-Ty2VAh7A")
@@ -80,7 +80,7 @@ bot.on('message', message => {
             .setColor('#2BA812')
             .setFooter((message.member.displayName))
             .setTimestamp();
-        message.channel.sendEmbed(anno);
+        message.channel.sendEmbed(ex);
         console.log("Commane du bot envoyée !");
     }
 });
