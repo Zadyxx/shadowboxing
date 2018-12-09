@@ -50,7 +50,7 @@ const changes = '$modif '
 bot.on('message', message => {
   if (message.content.startsWith(changes)) {
     const str = message.content.substring(changes.length)
-    var modif = new Discord.RichEmbed()
+    let modif = new Discord.RichEmbed()
     .setAuthor((message.member.displayName) + ":", (message.author.avatarURL))
     .setTitle("Modification:")
     .addFiel("", str)
