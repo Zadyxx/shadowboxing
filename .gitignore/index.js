@@ -34,7 +34,7 @@ bot.on('message', message => {
             .addField("Infos de l'expéditeur:", "Pack de 4 CC pour: Courts métrages style Vintage", false)
             .addBlankField() 
             .addField('Plugin nécessaire', "Magic Bullet", false)
-            .setThumbnail("https://imgur.com/2O2gxbJ")
+            .setThumbnail("https://i.imgur.com/2O2gxbJ.jpg")
             .setColor('#2BA812')
             .setFooter((message.member.displayName))
             .setTimestamp();
@@ -54,7 +54,7 @@ bot.on('message', message => {
             .setTitle("Color Correction:")
             .setDescription("Les 2 Packs sont finit: il y en a un gratuit et un payant.")
             .addBlankField() 
-            .setThumbnail("https://imgur.com/2O2gxbJ")
+            .setThumbnail("https://i.imgur.com/2O2gxbJ.jpg")
             .setColor('0xff80ff')
             .setFooter((message.member.displayName))
             .setTimestamp();
@@ -76,7 +76,7 @@ bot.on('message', message => {
             .addField("Infos de l'expéditeur:", "Trailer pour CybeRP réalisé en 2jours environ", false)
             .addBlankField() 
             .addField('Logiciels utilisés:', "SVP & AE", false)
-            .setThumbnail("https://imgur.com/2O2gxbJ") 
+            .setThumbnail("https://i.imgur.com/2O2gxbJ.jpg") 
             .setColor('#2BA812')
             .setFooter((message.member.displayName))
             .setTimestamp();
