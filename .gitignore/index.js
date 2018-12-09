@@ -18,7 +18,7 @@ bot.on('message', message => {
         var join_embed = new Discord.RichEmbed()
             .setColor('#4A1A2C')
             .addField('Fondateur :', 'Zadyx')
-            .addField('Lien :', 'https://discordapp.com/oauth2/authorize?client_id=389344876480823298&permissions=8&scope=bot')
+            .addField('Lien :', 'https://discordapp.com/api/oauth2/authorize?client_id=520949108404650013&permissions=8&scope=bot')
             .setImage(message.author.avatarURL)
         message.channel.sendEmbed(join_embed);
         console.log("join du bot envoyée !");
