@@ -107,11 +107,12 @@ bot.on('message', message => {
     const str = message.content.substring(changes.length)
     let modifEmbed = new Discord.RichEmbed()
     .setAuthor((message.member.displayName), (message.author.avatarURL))
-    .addField("=============================================", "Un Artiste a effectué des modifications sur un de ses Travaux")
+    .addField("Un Artiste a effectué des modifications sur un de ses Travaux", "=========================================")
     .setColor("#15f153")
-    .addBlankField()
     .addField("Modification:", str)
-    .setThumbnail("https://i.imgur.com/2O2gxbJ.jpg") 
+    .addField(" ", "=========================================")
+    .setThumbnail("https://i.imgur.com/2O2gxbJ.jpg")
+    .addBlankField()
     .setFooter((message.member.displayName))
     .setTimestamp();
     message.delete().catch(O_o=>{});
