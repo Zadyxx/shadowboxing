@@ -91,7 +91,6 @@ const uneCommande = '$sug '
 bot.on('message', message => {
   if (message.content.startsWith(uneCommande)) {
     const str = message.content.substring(uneCommande.length)
-    message.channel.sendMessage(str)
     let reportEmbed = new Discord.RichEmbed()
     .setDescription("Suggestions")
     .setColor("#15f153")
@@ -99,8 +98,7 @@ bot.on('message', message => {
     .addField("Channel:", (message.channel))
     .addField("Heure:", (message.createdAt))
     .addField("Suggestion:", str);
-    let reportschannel = message.guild.channels.find(`name`, "report");
     message.delete().catch(O_o=>{});
-    reportschannel.send(reportEmbed);
+    message.channel.sendMessage(str)
   }
 });
