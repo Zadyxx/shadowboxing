@@ -91,14 +91,6 @@ const uneCommande = '$sug '
 bot.on('message', message => {
   if (message.content.startsWith(uneCommande)) {
     const str = message.content.substring(uneCommande.length)
-    let premier = new Discord.RichEmbed()
-    .setAuthor('Merci pour ton idée/Suggestion' + (message.member.displayName) + "!", (message.author.avatarURL))
-    .setColor("#15f153")
-    .addField("Suggestion:", str)
-    .addBlankField() 
-    .setFooter((message.member.displayName))
-    .setTimestamp();
-    message.channel.sendEmbed(premier);
     let reportEmbed = new Discord.RichEmbed()
     .setAuthor('Idée de:' + (message.member.displayName), (message.author.avatarURL))
     .setColor("#15f153")
