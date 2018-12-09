@@ -79,18 +79,20 @@ bot.on('message', message => {
     const str = message.content.substring(uneCommande.length)
     let premier = new Discord.RichEmbed()
     .setAuthor('Merci pour ton idée/Suggestion ' + (message.member.displayName) + " !", (message.author.avatarURL))
+    .setDescription("=========================================")
     .setColor("#15f153")
     .addBlankField()
     .addField("Suggestion:", str)
-    .setThumbnail("https://i.imgur.com/2O2gxbJ.jpg") 
+    .setThumbnail((message.author.avatarURL)) 
     .setFooter((message.member.displayName))
     .setTimestamp();
     let reportEmbed = new Discord.RichEmbed()
     .setAuthor('Idée de: ' + (message.member.displayName), (message.author.avatarURL))
+    .setDescription("=========================================")
     .setColor("#15f153")
     .addBlankField() 
     .addField("Suggestion:", str)
-    .setThumbnail("https://i.imgur.com/2O2gxbJ.jpg") 
+    .setThumbnail((message.author.avatarURL)) 
     .setFooter((message.member.displayName))
     .setTimestamp();
     const reportschannel = message.guild.channels.find(`name`, "💌-boite-à-idées");
@@ -99,6 +101,7 @@ bot.on('message', message => {
     reportschannel.sendEmbed(reportEmbed);
   }
 });
+
 
 const changes = '$mod '
 
