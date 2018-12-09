@@ -43,3 +43,23 @@ bot.on('message', message => {
     }
 });
 
+
+
+
+bot.on('message', message => {
+    if (message.content === prefix + "changes")
+    {
+        var changes = new Discord.RichEmbed()
+            .setAuthor('Modifications de ' + (message.member.displayName) + ":", (message.author.avatarURL))
+            .setTitle("Color Correction:")
+            .setDescription("Les 2 Packs des Color Correction sont finis: il y en a un gratuit et un payant.")
+            .addBlankField() 
+            .setThumbnail(message.author.avatarURL)
+            .setColor('0xff80ff')
+            .setFooter((message.member.displayName))
+            .setTimestamp();
+        message.channel.sendEmbed(changes);
+        console.log("Commane du bot envoyée !");
+    }
+});
+
