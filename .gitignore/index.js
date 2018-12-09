@@ -99,6 +99,6 @@ bot.on('message', message => {
     .addField("Heure:", (message.createdAt))
     .addField("Suggestion:", str);
     message.delete().catch(O_o=>{});
-    message.channel.sendMessage(str)
+    message.channel.sendEmbed(reportEmbed)
   }
 });
