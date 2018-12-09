@@ -103,8 +103,3 @@ bot.on('message', message => {
     reportschannel.sendEmbed(reportEmbed);
   }
 });
-    const reportschannel = message.guild.channels.find(`name`, "suggestions");
-    message.delete().catch(O_o=>{});
-    reportschannel.sendEmbed(reportEmbed);
-  }
-});
