@@ -107,7 +107,7 @@ bot.on('message', message => {
     const str = message.content.substring(changes.length)
     let modifEmbed = new Discord.RichEmbed()
     .setAuthor((message.member.displayName), (message.author.avatarURL))
-    .addField("=================================================================", "Un Artiste a effectué des modifications sur un de ses Travaux")
+    .addField("=============================================", "Un Artiste a effectué des modifications sur un de ses Travaux")
     .setColor("#15f153")
     .addBlankField()
     .addField("Modification:", str)
