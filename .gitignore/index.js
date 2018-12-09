@@ -45,22 +45,21 @@ bot.on('message', message => {
 
 
 
-
 const changes = '$modif '
 
 bot.on('message', message => {
   if (message.content.startsWith(changes)) {
     const str = message.content.substring(changes.length)
-    var changes = new Discord.RichEmbed()
+    var modif = new Discord.RichEmbed()
     .setAuthor((message.member.displayName) + ":", (message.author.avatarURL))
     .setTitle("Modification:")
-    .setDescription(str)
+    .addFiel("", str)
     .addBlankField() 
     .setThumbnail("https://i.imgur.com/2O2gxbJ.jpg")
     .setColor('0xff80ff')
     .setFooter((message.member.displayName))
     .setTimestamp();
-    message.channel.sendEmbed(changes);
+    message.channel.sendEmbed(modif);
     console.log("Commane du bot envoyée !");
   }
 });
