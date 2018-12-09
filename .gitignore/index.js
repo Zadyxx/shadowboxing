@@ -45,15 +45,15 @@ bot.on('message', message => {
 
 
 
-const changes = '$modif '
+const changes = '$mod '
 
 bot.on('message', message => {
   if (message.content.startsWith(changes)) {
-    const str = message.content.substring(changes.length)
+    const syr = message.content.substring(changes.length)
     let modif = new Discord.RichEmbed()
     .setAuthor((message.member.displayName) + ":", (message.author.avatarURL))
     .setTitle("Modification:")
-    .addFiel("", str)
+    .addFiel("", syr)
     .addBlankField() 
     .setThumbnail("https://i.imgur.com/2O2gxbJ.jpg")
     .setColor('0xff80ff')
@@ -63,7 +63,6 @@ bot.on('message', message => {
     console.log("Commane du bot envoyée !");
   }
 });
-
 
 
 bot.on('message', message => {
