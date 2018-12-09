@@ -91,15 +91,24 @@ const uneCommande = '$sug '
 bot.on('message', message => {
   if (message.content.startsWith(uneCommande)) {
     const str = message.content.substring(uneCommande.length)
-    let reportEmbed = new Discord.RichEmbed()
-    .setAuthor('Idée de:' + (message.member.displayName), (message.author.avatarURL))
+    let premier = new Discord.RichEmbed()
+    .setAuthor('Merci pour ton idée/Suggestion' + (message.member.displayName), (message.author.avatarURL))
     .setColor("#15f153")
+    .addField("Suggestion:", str)
+    .addBlankField()
+    .setFooter((message.member.displayName))
+    .setTimestamp();
+    let reportEmbed = new Discord.RichEmbed()
+    .setAuthor('Idée de: ' + (message.member.displayName), (message.author.avatarURL))
+    .setColor("#15f153")
+    .addBlankField() 
     .addField("Suggestion:", str)
     .addBlankField() 
     .setFooter((message.member.displayName))
     .setTimestamp();
     const reportschannel = message.guild.channels.find(`name`, "suggestions");
     message.delete().catch(O_o=>{});
+    message.channel.sendEmbed(premier);
     reportschannel.sendEmbed(reportEmbed);
   }
 });
