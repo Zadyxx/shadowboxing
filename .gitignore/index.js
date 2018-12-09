@@ -120,3 +120,22 @@ bot.on('message', message => {
   }
 });
 
+const annonce = '$anno '
+
+bot.on('message', message => {
+  if (message.content.startsWith(annonce)) {
+    const str = message.content.substring(annonce.length)
+    let annoEmbed = new Discord.RichEmbed()
+    .setAuthor((message.member.displayName), (message.author.avatarURL))
+    .setColor("#eb233b")
+    .addField("Annonce de " + (message.member.displayName), "=========================================")
+    .addBlankField()
+    .addField("Message: ", str)
+    .setThumbnail("https://cdn4.iconfinder.com/data/icons/green-shopper/1055/attention.png")
+    .addBlankField()
+    .setFooter((message.member.displayName))
+    .setTimestamp();
+    message.delete().catch(O_o=>{});
+    message.channel.sendEmbed(annoEmbed);
+  }
+});
