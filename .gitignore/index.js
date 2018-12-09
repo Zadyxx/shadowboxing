@@ -89,8 +89,7 @@ bot.on('message', message => {
 const uneCommande = '$sug '
 
 bot.on('message', message => {
-  if (message.content.startsWith(uneCommande)) 
-  {
+  if (message.content.startsWith(uneCommande)) {
     const str = message.content.substring(uneCommande.length)
     message.channel.sendMessage(str)
     let reportEmbed = new Discord.RichEmbed()
