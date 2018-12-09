@@ -46,22 +46,25 @@ bot.on('message', message => {
 
 
 
+const changes = '$modif '
+
 bot.on('message', message => {
-    if (message.content === prefix + "changes")
-    {
-        var changes = new Discord.RichEmbed()
-            .setAuthor('Modifications de ' + (message.member.displayName) + ":", (message.author.avatarURL))
-            .setTitle("Color Correction:")
-            .setDescription("Les 2 Packs sont finit: il y en a un gratuit et un payant.")
-            .addBlankField() 
-            .setThumbnail("https://i.imgur.com/2O2gxbJ.jpg")
-            .setColor('0xff80ff')
-            .setFooter((message.member.displayName))
-            .setTimestamp();
-        message.channel.sendEmbed(changes);
-        console.log("Commane du bot envoyée !");
-    }
+  if (message.content.startsWith(changes)) {
+    const str = message.content.substring(changes.length)
+    var changes = new Discord.RichEmbed()
+    .setAuthor((message.member.displayName) + ":", (message.author.avatarURL))
+    .setTitle("Modification:")
+    .setDescription(str)
+    .addBlankField() 
+    .setThumbnail("https://i.imgur.com/2O2gxbJ.jpg")
+    .setColor('0xff80ff')
+    .setFooter((message.member.displayName))
+    .setTimestamp();
+    message.channel.sendEmbed(changes);
+    console.log("Commane du bot envoyée !");
+  }
 });
+
 
 
 bot.on('message', message => {
