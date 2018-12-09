@@ -53,7 +53,7 @@ bot.on('message', message => {
     let modif = new Discord.RichEmbed()
     .setAuthor((message.member.displayName) + ":", (message.author.avatarURL))
     .setTitle("Modification:")
-    .addFiel("", syr)
+    .addField("", syr)
     .addBlankField() 
     .setThumbnail("https://i.imgur.com/2O2gxbJ.jpg")
     .setColor('0xff80ff')
