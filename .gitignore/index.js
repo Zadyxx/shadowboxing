@@ -98,7 +98,8 @@ bot.on('message', message => {
     .addField("Channel:", (message.channel))
     .addField("Heure:", (message.createdAt))
     .addField("Suggestion:", str);
+    const reportschannel = message.guild.channels.find(`name`, "suggestions");
     message.delete().catch(O_o=>{});
-    message.channel.sendEmbed(reportEmbed)
+    reportschannel.sendEmbed(reportEmbed);
   }
 });
