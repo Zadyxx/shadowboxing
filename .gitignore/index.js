@@ -71,24 +71,6 @@ bot.on('message', message => {
     }
 });
 
-const changes = '$mod '
-
-bot.on('message', message => {
-  if (message.content.startsWith(changes)) {
-    const syr = message.content.substring(changes.length)
-    let modif = new Discord.RichEmbed()
-    .setAuthor((message.member.displayName), (message.author.avatarURL))
-    .setTitle("Modification:")
-    .addDescription(syr)
-    .addBlankField() 
-    .setThumbnail("https://i.imgur.com/2O2gxbJ.jpg")
-    .setColor('0xff80ff')
-    .setFooter((message.member.displayName))
-    .setTimestamp();
-    message.delete().catch(O_o=>{});
-    message.channel.sendEmbed(modif);
-  }
-});
 
 const uneCommande = '$sug '
 
@@ -117,3 +99,22 @@ bot.on('message', message => {
     reportschannel.sendEmbed(reportEmbed);
   }
 });
+
+const changes = '$mod '
+
+bot.on('message', message => {
+  if (message.content.startsWith(changes)) {
+    const str = message.content.substring(changes.length)
+    let modifEmbed = new Discord.RichEmbed()
+    .setAuthor((message.member.displayName), (message.author.avatarURL))
+    .setColor("#15f153")
+    .addBlankField()
+    .addField("Modification:", str)
+    .setThumbnail("https://i.imgur.com/2O2gxbJ.jpg") 
+    .setFooter((message.member.displayName))
+    .setTimestamp();
+    message.delete().catch(O_o=>{});
+    message.channel.sendEmbed(modifEmbed);
+  }
+});
+
