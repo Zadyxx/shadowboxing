@@ -63,3 +63,25 @@ bot.on('message', message => {
     }
 });
 
+
+bot.on('message', message => {
+    if (message.content === prefix + "anno")
+    {
+        var anno = new Discord.RichEmbed()
+            .setAuthor('Création de ' + (message.member.displayName) + ":", (message.author.avatarURL))
+            .setTitle("Lien Youtube")
+            .setURL("https://www.youtube.com/watch?v=Ac-Ty2VAh7A")
+            .setDescription("Vidéo en non répertoriée, Youtube sert juste d'hébergeur pour vous montrer")
+            .addBlankField() 
+            .addField("Infos de l'expéditeur:", "Trailer pour CybeRP réalisé en 2jours environ", false)
+            .addBlankField() 
+            .addField('Logiciels utilisés:', "SVP & AE", false)
+            .setThumbnail(message.author.avatarURL) 
+            .setColor('#2BA812')
+            .setFooter((message.member.displayName))
+            .setTimestamp();
+        message.channel.sendEmbed(anno);
+        console.log("Commane du bot envoyée !");
+    }
+});
+
