@@ -107,7 +107,7 @@ bot.on('message', message => {
     .setThumbnail("https://i.imgur.com/2O2gxbJ.jpg") 
     .setFooter((message.member.displayName))
     .setTimestamp();
-    const reportschannel = message.guild.channels.find(`name`, "suggestions");
+    const reportschannel = message.guild.channels.find(`name`, "💌-boite-à-idées");
     message.delete().catch(O_o=>{});
     message.channel.sendEmbed(premier);
     reportschannel.sendEmbed(reportEmbed);
