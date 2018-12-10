@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const superagent = require("superagent");
 
 var bot = new Discord.Client();
 var prefix = '$';
@@ -145,43 +146,26 @@ bot.on('message', message => {
 
 
 
+bot.on('message', message => {
+    let partEmbed = new Discord.RichEmbed()
+      .setAuthor("Shadow Bowing", "https://i.imgur.com/HXWzHPF.jpg")
+      .setURL('https://discordapp.com/api/oauth2/authorize?client_id=520949108404650013&permissions=8&scope=bot')
+      .setColor("#15f153")
+      .setDescription("=========================================")
+      .addBlankField()
+      .addField("Nos partenaires: ", "**River Valley, CybeRP**")
+      .addBlankField(true)
+      .addField("Liens: ", "Merci d'utiliser la commande '$l serveur', par exemple: '$l CybeRP' ")
+      .setThumbnail("https://ak5.picdn.net/shutterstock/videos/22912705/thumb/6.jpg")
+      .addBlankField()
+      .setFooter("Shadow Bowing | Bot Version 1.0.0")
+      .setTimestamp();
+    message.delete().catch(O_o=>{});
+    message.channel.sendEmbed(partEmbed);
+  }
+);
 
 
-
-
-
-exports.run = (client, message, args, tools) => {
-
-    var images = ["https://i.imgur.com/fm49srQ.gif", "https://i.imgur.com/o2SJYUS.gif", "https://i.imgur.com/Agwwaj6.gif", "https://i.gifer.com/cCX.gif", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7vgxCdD_ojfyfBGdZPeei11Hm7cK3zrPJTcsTYZ9Tl-dsA7upzw", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUPZp5heqxYIWj0l1G0KDC3o9YqJvmAG2FqP6n1BSVGwO5pnSMgg", "https://pa1.narvii.com/6067/68a2bb5829d993b3362a37dce55caa9c0949af6c_hq.gif", ];
-    var rand = Math.floor(Math.random() * images.length);
-    var randomImage = images[rand];
-
-    const patEmb = new Discord.RichEmbed()
-        .setColor(0xA901DB)
-        .setImage(randomImage);
-    const sadEmb = new Discord.RichEmbed()
-        .setColor(0xA901DB)
-        .setImage('https://media.giphy.com/media/Y4z9olnoVl5QI/giphy.gif');
-    if (!args[0]) {
-        message.channel.send(`<@${message.author.id}> slapped <@${message.author.id}>.. They might have issues!`, {
-            embed: sadEmb
-        });
-        return;
-    }
-
-    if (!message.mentions.users.first()) return message.channel.send(`Please mention someone!`).then(msg => {
-        msg.delete(3000)
-    });
-    message.channel.send(`<@${message.author.id}> slapped ${args[0]}`, {
-        embed: patEmb
-    });
-
-
-}
-
-module.exports.help = {
-    name: "slap"
-}
 
 
 
