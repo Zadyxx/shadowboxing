@@ -166,6 +166,23 @@ bot.on('message', message => {
 });
 
 
+bot.on('message', message => {
+  if (message.content === prefix + "l CybeRP") {
+    let cybeEmbed = new Discord.RichEmbed()
+    .setAuthor("Shadow Bowing", "https://i.imgur.com/HXWzHPF.jpg")
+    .setTitle("CybeRP")
+    .setURL('https://discord.gg/YAGd7Te')
+    .setColor("#15f153")
+    .setDescription("=========================================")
+    .addBlankField()
+    .setThumbnail("https://ak5.picdn.net/shutterstock/videos/22912705/thumb/6.jpg")
+    .setFooter("Shadow Bowing | Bot Version 1.0.0")
+    .setTimestamp();
+    message.delete().catch(O_o=>{});
+    message.channel.sendEmbed(cybeEmbed);
+  }
+});
+
 
 
 
