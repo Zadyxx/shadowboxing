@@ -147,26 +147,6 @@ bot.on('message', message => {
 
 
 
-bot.on('message', message => {
-  if (message.content === prefix + "part") {
-    let partEmbed = new Discord.RichEmbed()
-    .setTitle("Shadow Bowing", "https://i.imgur.com/HXWzHPF.jpg")
-    .setURL('https://discordapp.com/api/oauth2/authorize?client_id=520949108404650013&permissions=8&scope=bot')
-    .setColor("#15f153")
-    .setDescription("=========================================")
-    .addBlankField()
-    .addField("Nos partenaires: ", "**River Valley, CybeRP**")
-    .addBlankField()
-    .addField("Liens: ", "Merci d'utiliser la commande '$l serveur', par exemple: '$l CybeRP'")
-    .setThumbnail("https://ak5.picdn.net/shutterstock/videos/22912705/thumb/6.jpg")
-    .addBlankField()
-    .setFooter("Shadow Bowing | Bot Version 1.0.0")
-    .setTimestamp();
-    message.delete().catch(O_o=>{});
-    message.channel.sendEmbed(partEmbed);
-  }
-});
-
 
 
 
