@@ -138,8 +138,6 @@ bot.on('message', message => {
     .addBlankField()
     .setFooter((message.member.displayName))
     .setTimestamp();
-    message.react("❎");
-    message.react("✅");
     message.delete().catch(O_o=>{});
     message.channel.sendEmbed(annoEmbed);
   }
