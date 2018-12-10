@@ -146,7 +146,9 @@ bot.on('message', message => {
 
 
 
+
 bot.on('message', message => {
+  if (message.content === prefix + "part") {
     let partEmbed = new Discord.RichEmbed()
       .setAuthor("Shadow Bowing", "https://i.imgur.com/HXWzHPF.jpg")
       .setURL('https://discordapp.com/api/oauth2/authorize?client_id=520949108404650013&permissions=8&scope=bot')
@@ -163,7 +165,8 @@ bot.on('message', message => {
     message.delete().catch(O_o=>{});
     message.channel.sendEmbed(partEmbed);
   }
-);
+});
+
 
 
 
